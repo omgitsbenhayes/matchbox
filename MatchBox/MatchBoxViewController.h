@@ -11,11 +11,13 @@
 #import "FBFriendsList.h"
 #import "MatchBox.h"
 #import "FBFriend.h"
+#import "DraggableObject.h"
 
 @interface MatchBoxViewController : UIViewController
 
 @property FBFriendsList *friendsList;
 
-- (void)setImageOfFriend: (FBFriend*)aFriend ToView: (UIView*) aView;
+- (void)setImageOfFriend: (FBFriend*)aFriend ToView: (UIView*) aView WithLabel: (UILabel*) pLabel;
+-(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 
 @end

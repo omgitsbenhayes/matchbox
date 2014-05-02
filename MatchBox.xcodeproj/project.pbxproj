@@ -27,6 +27,9 @@
 		95BF36E118F0A1180054288F /* MatchBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BF36E018F0A1180054288F /* MatchBoxTests.m */; };
 		95BF36EB18F0A12E0054288F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BF36EA18F0A12E0054288F /* FacebookSDK.framework */; };
 		95BF36EE18F0EBBF0054288F /* MatchBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BF36ED18F0EBBF0054288F /* MatchBoxViewController.m */; };
+		95CFD18719130FEE001E7FD9 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CFD18619130FEE001E7FD9 /* Match.m */; };
+		95CFD18A1913E201001E7FD9 /* MatchList.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CFD1891913E201001E7FD9 /* MatchList.m */; };
+		95CFD18D1913EAF5001E7FD9 /* DraggableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CFD18C1913EAF5001E7FD9 /* DraggableObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,12 @@
 		95BF36EA18F0A12E0054288F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		95BF36EC18F0EBBF0054288F /* MatchBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchBoxViewController.h; sourceTree = "<group>"; };
 		95BF36ED18F0EBBF0054288F /* MatchBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchBoxViewController.m; sourceTree = "<group>"; };
+		95CFD18519130FEE001E7FD9 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		95CFD18619130FEE001E7FD9 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
+		95CFD1881913E201001E7FD9 /* MatchList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchList.h; sourceTree = "<group>"; };
+		95CFD1891913E201001E7FD9 /* MatchList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchList.m; sourceTree = "<group>"; };
+		95CFD18B1913EAF5001E7FD9 /* DraggableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableObject.h; sourceTree = "<group>"; };
+		95CFD18C1913EAF5001E7FD9 /* DraggableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +155,12 @@
 				95BF36B918F0A1170054288F /* Supporting Files */,
 				95BF36EC18F0EBBF0054288F /* MatchBoxViewController.h */,
 				95BF36ED18F0EBBF0054288F /* MatchBoxViewController.m */,
+				95CFD18B1913EAF5001E7FD9 /* DraggableObject.h */,
+				95CFD18C1913EAF5001E7FD9 /* DraggableObject.m */,
+				95CFD18519130FEE001E7FD9 /* Match.h */,
+				95CFD18619130FEE001E7FD9 /* Match.m */,
+				95CFD1881913E201001E7FD9 /* MatchList.h */,
+				95CFD1891913E201001E7FD9 /* MatchList.m */,
 			);
 			path = MatchBox;
 			sourceTree = "<group>";
@@ -279,11 +294,14 @@
 			files = (
 				954EB0B318FAD1E400E5AD2A /* FBFriendsList.m in Sources */,
 				95BF36CC18F0A1180054288F /* ViewController.m in Sources */,
+				95CFD18D1913EAF5001E7FD9 /* DraggableObject.m in Sources */,
+				95CFD18A1913E201001E7FD9 /* MatchList.m in Sources */,
 				954EB0B918FB714C00E5AD2A /* MatchBox.m in Sources */,
 				95BF36EE18F0EBBF0054288F /* MatchBoxViewController.m in Sources */,
 				95BF36C318F0A1180054288F /* AppDelegate.m in Sources */,
 				95BF36BF18F0A1170054288F /* main.m in Sources */,
 				954EB0B618FB6A7500E5AD2A /* FBFriend.m in Sources */,
+				95CFD18719130FEE001E7FD9 /* Match.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
