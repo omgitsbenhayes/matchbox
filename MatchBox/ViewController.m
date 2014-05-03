@@ -153,7 +153,6 @@
 - (void)sendRequest
 {
     NSString *fbid = @"/me";
-    //NSString *fbid = @"12427943";
     
     FBRequestConnection *newConnection = [[FBRequestConnection alloc] init];
     

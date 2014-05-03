@@ -23,4 +23,9 @@
     return self;
 }
 
+-(void) displayNamesOfMatchedIndividuals
+{
+    NSLog(@"%@ and %@", personOne.name, personTwo.name);
+}
+
 @end

@@ -12,6 +12,7 @@
 #import "MatchBox.h"
 #import "FBFriend.h"
 #import "DraggableObject.h"
+#import "Match.h"
 
 @interface MatchBoxViewController : UIViewController
 
@@ -20,8 +21,15 @@
 @property BOOL rightFilled;
 @property CGPoint leftMatchCenterPoint;
 @property CGPoint rightMatchCenterPoint;
+@property FBFriend *leftFriend;
+@property FBFriend *rightFriend;
+@property Match *theMatch;
 
-- (void)setImageOfFriend: (FBFriend*)aFriend ToView: (UIView*) aView WithLabel: (UILabel*) pLabel;
--(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
+//- (void)setImageOfFriend: (FBFriend*)aFriend ToView: (UIView*) aView WithLabel: (UILabel*) pLabel;
+//-(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
+- (void)setLeft: (FBFriend*) pFBFriend;
+- (void)setRight: (FBFriend*) pFBFriend;
+- (BOOL)matchMadeByUser;
+- (void)createMatch;
 
 @end

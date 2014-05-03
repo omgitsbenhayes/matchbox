@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MatchBoxViewController.h"
+#import "FBFriend.h"
 
 @class MatchBoxViewController;
 @interface DraggableObject : UIView
@@ -16,5 +17,9 @@
 @property CGPoint newPoint;
 @property CGPoint startCenterPoint;
 @property MatchBoxViewController *theMatchBoxViewController;
+@property FBFriend *theFBFriend;
+
+-(void) setFBFriendImage;
+-(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 
 @end

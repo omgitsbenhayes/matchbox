@@ -10,14 +10,13 @@
 #import "FBFriend.h"
 
 @interface Match : NSObject
-{
-    
-}
 
 @property FBFriend *personOne;
 @property FBFriend *personTwo;
 @property NSString *matchText;
 @property NSString *createUser;
 @property NSDate *createDate;
+
+-(void) displayNamesOfMatchedIndividuals;
 
 @end

@@ -28,6 +28,9 @@
 @synthesize rightFilled;
 @synthesize leftMatchCenterPoint;
 @synthesize rightMatchCenterPoint;
+@synthesize leftFriend;
+@synthesize rightFriend;
+@synthesize theMatch;
 
 - (void)viewDidLoad
 {
@@ -58,10 +61,20 @@
     FBFriend* friendTwo = [mbList objectAtIndex:1];
     FBFriend* friendThree = [mbList objectAtIndex:2];
     FBFriend* friendFour = [mbList objectAtIndex:3];
-    [self setImageOfFriend:friendOne ToView:self.upperLeftFriend WithLabel:self.upperLeftFriendText];
+    /*[self setImageOfFriend:friendOne ToView:self.upperLeftFriend WithLabel:self.upperLeftFriendText];
     [self setImageOfFriend:friendTwo ToView:self.upperRightFriend WithLabel:self.upperRightFriendText];
     [self setImageOfFriend:friendThree ToView:self.lowerLeftFriend WithLabel:self.lowerLeftFriendText];
-    [self setImageOfFriend:friendFour ToView:self.lowerRightFriend WithLabel:self.lowerRightFriendText];
+    [self setImageOfFriend:friendFour ToView:self.lowerRightFriend WithLabel:self.lowerRightFriendText];*/
+    
+    self.upperLeftFriend.theFBFriend = friendOne;
+    [self.upperLeftFriend setFBFriendImage];
+    self.upperRightFriend.theFBFriend = friendTwo;
+    [self.upperRightFriend setFBFriendImage];
+    self.lowerLeftFriend.theFBFriend = friendThree;
+    [self.lowerLeftFriend setFBFriendImage];
+    self.lowerRightFriend.theFBFriend = friendFour;
+    [self.lowerRightFriend setFBFriendImage];
+    
     
     //Pass the MBVC to the Draggable images
     self.upperLeftFriend.theMatchBoxViewController = self;
@@ -95,6 +108,37 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setLeft: (FBFriend*) pFBFriend
+{
+    leftFriend = pFBFriend;
+    leftFilled = YES;
+}
+
+- (void)setRight: (FBFriend*) pFBFriend
+{
+    rightFriend = pFBFriend;
+    rightFilled = YES;
+}
+
+- (BOOL)matchMadeByUser
+{
+    if (leftFilled && rightFilled) {
+        return YES;
+    }
+    else{
+        return NO;
+    }
+}
+
+- (void)createMatch
+{
+    theMatch = [[Match alloc] init];
+    theMatch.personOne = self.leftFriend;
+    theMatch.personTwo = self.rightFriend;
+    [theMatch displayNamesOfMatchedIndividuals];
+}
+
+/*
 - (void)setImageOfFriend: (FBFriend*) aFriend ToView: (UIView*) aView WithLabel: (UILabel*) pLabel
 {
     NSURL *imgUrl=[[NSURL alloc] initWithString:aFriend.fbPhoto];
@@ -143,5 +187,7 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+ 
+ */
 
 @end
