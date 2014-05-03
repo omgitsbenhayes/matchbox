@@ -24,18 +24,23 @@
 @implementation MatchBoxViewController
 
 @synthesize friendsList;
+@synthesize leftFilled;
+@synthesize rightFilled;
+@synthesize leftMatchCenterPoint;
+@synthesize rightMatchCenterPoint;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"Friends in  MBVC: %i", [friendsList.fbFriendsList count]);
+    //NSLog(@"Friends in  MBVC: %i", [friendsList.fbFriendsList count]);
     
     //Generate the matchbox
     self.matchboxView.layer.borderColor = [UIColor grayColor].CGColor;
     self.matchboxView.layer.borderWidth = 2.0f;
     self.matchboxView.backgroundColor = [UIColor clearColor];
     
+    //Add the matchbox logo to the matchbox
     UILabel *matchboxLogo = [[UILabel alloc]init];
     matchboxLogo.center = self.matchboxView.center;
     matchboxLogo.text = @"matchbox";
@@ -45,6 +50,7 @@
     matchboxLogo.frame = self.matchboxView.bounds;
     [self.matchboxView addSubview:matchboxLogo];
     
+    //Generate the matchbox and set the images to the four friends
     MatchBox *mb = [[MatchBox alloc] initWithFriendsList:friendsList];
     [mb generateMatchBox];
     NSMutableArray* mbList = mb.matchboxFriends;
@@ -56,6 +62,30 @@
     [self setImageOfFriend:friendTwo ToView:self.upperRightFriend WithLabel:self.upperRightFriendText];
     [self setImageOfFriend:friendThree ToView:self.lowerLeftFriend WithLabel:self.lowerLeftFriendText];
     [self setImageOfFriend:friendFour ToView:self.lowerRightFriend WithLabel:self.lowerRightFriendText];
+    
+    //Pass the MBVC to the Draggable images
+    self.upperLeftFriend.theMatchBoxViewController = self;
+    self.upperRightFriend.theMatchBoxViewController = self;
+    self.lowerLeftFriend.theMatchBoxViewController = self;
+    self.lowerRightFriend.theMatchBoxViewController = self;
+    
+    //Set the right-filled and left-filled booleans to NO
+    self.leftFilled = NO;
+    self.rightFilled = NO;
+    
+    //Set the center points of the match locations
+    CGFloat x = self.matchboxView.frame.origin.x;
+    CGFloat y = self.matchboxView.frame.origin.y;
+    CGFloat width = self.matchboxView.frame.size.width;
+    CGFloat height = self.matchboxView.frame.size.height;
+    CGFloat quarterWidth = width / 4.0f;
+    CGFloat halfHeight = height / 2.0f;
+    CGFloat leftX = x + quarterWidth;
+    CGFloat rightX = x + (3*quarterWidth);
+    CGFloat leftY = y + halfHeight;
+    CGFloat rightY = y + halfHeight;
+    self.leftMatchCenterPoint = CGPointMake(leftX, leftY);
+    self.rightMatchCenterPoint = CGPointMake(rightX, rightY);
      
 }
 

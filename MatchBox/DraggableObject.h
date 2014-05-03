@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MatchBoxViewController.h"
 
+@class MatchBoxViewController;
 @interface DraggableObject : UIView
 
 @property CGPoint startPoint;
 @property CGPoint newPoint;
 @property CGPoint startCenterPoint;
+@property MatchBoxViewController *theMatchBoxViewController;
 
 @end

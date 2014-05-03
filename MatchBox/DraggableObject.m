@@ -13,6 +13,7 @@
 @synthesize startPoint;
 @synthesize newPoint;
 @synthesize startCenterPoint;
+@synthesize theMatchBoxViewController;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -23,14 +24,9 @@
     return self;
 }
 
--(void) setCenter:(CGPoint)center
-{
-    self.startCenterPoint = center;
-    NSLog(@"Center Point Set");
-}
-
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    startCenterPoint = self.center;
     startPoint = [[touches anyObject] locationInView:self];
     NSLog(@"Touches Began");
 }
@@ -49,6 +45,30 @@
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"Touches Ended");
+    
+    if (theMatchBoxViewController.leftFilled == NO && [self distanceFromPoint:theMatchBoxViewController.leftMatchCenterPoint] < 30.0f) {
+        NSLog(@"Left Match");
+        theMatchBoxViewController.leftFilled = YES;
+        self.center = CGPointMake(theMatchBoxViewController.leftMatchCenterPoint.x, theMatchBoxViewController.leftMatchCenterPoint.y);
+    }
+    else if (theMatchBoxViewController.rightFilled == NO && [self distanceFromPoint:theMatchBoxViewController.rightMatchCenterPoint] < 30.0f) {
+        NSLog(@"Right Match");
+        theMatchBoxViewController.rightFilled = YES;
+        self.center = CGPointMake(theMatchBoxViewController.rightMatchCenterPoint.x, theMatchBoxViewController.rightMatchCenterPoint.y);
+    }
+    else{
+        NSLog(@"Not Matched");
+        self.center = CGPointMake(startCenterPoint.x, startCenterPoint.y);
+    }
+}
+
+-(float) distanceFromPoint: (CGPoint) pPoint
+{
+    CGFloat dx= self.center.x - pPoint.x;
+    CGFloat dy= self.center.y - pPoint.y;
+    CGFloat distance= sqrt(dx*dx + dy*dy);
+    NSLog(@"Distance is %f", distance);
+    return distance;
 }
 
 /*

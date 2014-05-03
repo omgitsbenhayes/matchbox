@@ -16,6 +16,10 @@
 @interface MatchBoxViewController : UIViewController
 
 @property FBFriendsList *friendsList;
+@property BOOL leftFilled;
+@property BOOL rightFilled;
+@property CGPoint leftMatchCenterPoint;
+@property CGPoint rightMatchCenterPoint;
 
 - (void)setImageOfFriend: (FBFriend*)aFriend ToView: (UIView*) aView WithLabel: (UILabel*) pLabel;
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
