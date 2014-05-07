@@ -32,6 +32,7 @@
 @synthesize friendsList;
 @synthesize firstTime;
 @synthesize friendsLoaded;
+@synthesize loginView;
 
 - (void)viewDidLoad
 {
@@ -144,7 +145,7 @@
 
 - (void)addFBLoginView
 {
-    FBLoginView *loginView = [[FBLoginView alloc] init];
+    loginView = [[FBLoginView alloc] init];
     // Align the button in the center horizontally and vertically
     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), (self.view.center.y - (loginView.frame.size.height / 2)));
     [self.view addSubview:loginView];

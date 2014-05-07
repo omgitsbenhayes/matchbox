@@ -12,11 +12,14 @@
 //#import "MatchBox.h"
 #import "MatchBoxViewController.h"
 
+@class FBLoginView;
+
 @interface ViewController : UIViewController
 
 @property FBFriendsList* friendsList;
 @property BOOL firstTime;
 @property BOOL friendsLoaded;
+@property FBLoginView *loginView;
 
 -(void) generateFriendsList: (NSArray *) list;
 

@@ -138,6 +138,11 @@
     [theMatch displayNamesOfMatchedIndividuals];
 }
 
+- (void)newMatchbox
+{
+    
+}
+
 /*
 - (void)setImageOfFriend: (FBFriend*) aFriend ToView: (UIView*) aView WithLabel: (UILabel*) pLabel
 {
