@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0AC95D29192197E400B4D9BB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC95D28192197E400B4D9BB /* FacebookSDK.framework */; };
-		0AC95D2B19219DB100B4D9BB /* KRVolled.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC95D2A19219DB100B4D9BB /* KRVolled.jpg */; };
 		954EB0B318FAD1E400E5AD2A /* FBFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 954EB0B218FAD1E400E5AD2A /* FBFriendsList.m */; };
 		954EB0B618FB6A7500E5AD2A /* FBFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 954EB0B518FB6A7500E5AD2A /* FBFriend.m */; };
 		954EB0B918FB714C00E5AD2A /* MatchBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 954EB0B818FB714C00E5AD2A /* MatchBox.m */; };
@@ -45,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		0AC95D28192197E400B4D9BB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		0AC95D2A19219DB100B4D9BB /* KRVolled.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = KRVolled.jpg; path = ../../../../../Pictures/KRVolled.jpg; sourceTree = "<group>"; };
 		954EB0B118FAD1E400E5AD2A /* FBFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendsList.h; sourceTree = "<group>"; };
 		954EB0B218FAD1E400E5AD2A /* FBFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendsList.m; sourceTree = "<group>"; };
 		954EB0B418FB6A7500E5AD2A /* FBFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriend.h; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 		95BF36B918F0A1170054288F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0AC95D2A19219DB100B4D9BB /* KRVolled.jpg */,
 				95BF36BA18F0A1170054288F /* MatchBox-Info.plist */,
 				95BF36BB18F0A1170054288F /* InfoPlist.strings */,
 				95BF36BE18F0A1170054288F /* main.m */,
@@ -275,7 +272,6 @@
 			files = (
 				95BF36C918F0A1180054288F /* Main_iPad.storyboard in Resources */,
 				95BF36CE18F0A1180054288F /* Images.xcassets in Resources */,
-				0AC95D2B19219DB100B4D9BB /* KRVolled.jpg in Resources */,
 				95BF36C618F0A1180054288F /* Main_iPhone.storyboard in Resources */,
 				95BF36BD18F0A1170054288F /* InfoPlist.strings in Resources */,
 			);
