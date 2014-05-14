@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AC95D29192197E400B4D9BB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC95D28192197E400B4D9BB /* FacebookSDK.framework */; };
+		950A58DA1922F9F500C87D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950A58D91922F9F500C87D73 /* FacebookSDK.framework */; };
 		954EB0B318FAD1E400E5AD2A /* FBFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 954EB0B218FAD1E400E5AD2A /* FBFriendsList.m */; };
 		954EB0B618FB6A7500E5AD2A /* FBFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 954EB0B518FB6A7500E5AD2A /* FBFriend.m */; };
 		954EB0B918FB714C00E5AD2A /* MatchBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 954EB0B818FB714C00E5AD2A /* MatchBox.m */; };
@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AC95D28192197E400B4D9BB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		950A58D91922F9F500C87D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = MatchBox/FacebookSDK.framework; sourceTree = "<group>"; };
 		954EB0B118FAD1E400E5AD2A /* FBFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendsList.h; sourceTree = "<group>"; };
 		954EB0B218FAD1E400E5AD2A /* FBFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendsList.m; sourceTree = "<group>"; };
 		954EB0B418FB6A7500E5AD2A /* FBFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriend.h; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC95D29192197E400B4D9BB /* FacebookSDK.framework in Frameworks */,
 				95BF36B518F0A1170054288F /* CoreGraphics.framework in Frameworks */,
+				950A58DA1922F9F500C87D73 /* FacebookSDK.framework in Frameworks */,
 				95BF36B718F0A1170054288F /* UIKit.framework in Frameworks */,
 				95BF36B318F0A1170054288F /* Foundation.framework in Frameworks */,
 			);
@@ -127,7 +127,7 @@
 		95BF36B118F0A1170054288F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AC95D28192197E400B4D9BB /* FacebookSDK.framework */,
+				950A58D91922F9F500C87D73 /* FacebookSDK.framework */,
 				95BF36B218F0A1170054288F /* Foundation.framework */,
 				95BF36B418F0A1170054288F /* CoreGraphics.framework */,
 				95BF36B618F0A1170054288F /* UIKit.framework */,
@@ -436,11 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/matthewmchugh/Documents/FacebookSDK,
-					/Users/Kevin/Documents/FacebookSDK,
-				);
+				FRAMEWORK_SEARCH_PATHS = Matchbox;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MatchBox/MatchBox-Prefix.pch";
 				INFOPLIST_FILE = "MatchBox/MatchBox-Info.plist";
@@ -454,11 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/matthewmchugh/Documents/FacebookSDK,
-					/Users/Kevin/Documents/FacebookSDK,
-				);
+				FRAMEWORK_SEARCH_PATHS = Matchbox;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MatchBox/MatchBox-Prefix.pch";
 				INFOPLIST_FILE = "MatchBox/MatchBox-Info.plist";
